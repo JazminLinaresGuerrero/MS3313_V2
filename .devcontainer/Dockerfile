@@ -46,7 +46,8 @@ RUN mamba install -c conda-forge -y --quiet \
   r-corrplot r-factominer r-factoextra r-pls r-cluster r-igraph \
   r-gparotation r-lavaan r-diagrammer \
   r-class r-randomforest r-nnet \
-  r-ggally r-gridextra r-ggrepel r-plotly r-rcolorbrewer r-forecast && \
+  r-ggally r-gridextra r-ggrepel r-plotly r-rcolorbrewer r-forecast \
+  r-writexl r-readxl && \
   mamba clean --all -f -y
 
 # ---- Python packages (data science essentials) ----

@@ -85,7 +85,8 @@ echo "   Kernels:    $(jupyter kernelspec list 2>/dev/null | grep -c '  ') avail
 # Quick R package check
 R --quiet --no-save -e '
 pkgs <- c("mlba","tidyverse","caret","Hmisc","psych","pastecs","e1071",
-          "fastDummies","languageserver","httpgd","IRkernel")
+          "fastDummies","writexl","readxl","languageserver","httpgd","IRkernel",
+          "FactoMineR","factoextra","pls","conjoint","lavaan","DiscriMiner","cluster")
 missing <- pkgs[!sapply(pkgs, requireNamespace, quietly=TRUE)]
 if (length(missing)==0) cat("   R packages: all OK\n") else cat("   R packages missing:", paste(missing, collapse=", "), "\n")
 ' 2>/dev/null

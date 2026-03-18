@@ -2,8 +2,9 @@
   "name": "Data Science Classroom",
   
   // Use pre-built image from GHCR for fast startup (~2 min vs ~15 min)
-  // Falls back to building if image not available
-  "image": "ghcr.io/utsa-humphries-data-science/test2:latest",
+  // Image built by .github/workflows/build-container.yml on push to main
+  // If image is unavailable, replace "image" with: "build": { "dockerfile": "Dockerfile" }
+  "image": "ghcr.io/utsa-humphries-data-science/ms3313_v2:latest",
   
   // Container settings
   "overrideCommand": false,
@@ -39,6 +40,8 @@
         "janisdd.vscode-edit-csv",
         "redhat.vscode-yaml",
         "yzhang.markdown-all-in-one",
+        "ms-python.black-formatter",
+        "ms-python.flake8",
         "github.copilot",
         "github.copilot-chat",
         "eamodio.gitlens"
@@ -91,16 +94,17 @@
         "notebook.lineNumbers": "on",
         "jupyter.completionTriggerCharacters": ["."],
         
-        "jupyter.jupyterServerType": "local",
+        // Jupyter kernel settings
         "jupyter.kernels.filter": [],
         "files.associations": {
           "*.rmd": "rmd",
           "*.Rmd": "rmd"
         },
         "editor.rulers": [80, 120],
-        "python.formatting.provider": "black",
-        "python.linting.enabled": true,
-        "python.linting.flake8Enabled": true,
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter"
+        },
+        "flake8.enabled": true,
         "git.enableSmartCommit": true,
         "git.confirmSync": false,
         "editor.formatOnSave": true,
