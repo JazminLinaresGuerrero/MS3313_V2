@@ -39,6 +39,8 @@ essential_packages <- c(
     "psych",      # Psychological research tools, describe() with skewness/kurtosis
     "e1071",      # SVMs, skewness/kurtosis functions, naive Bayes
     "correlation", # Correlation analysis with multiple methods
+    "caret",      # Classification and regression training (KNN, model tuning)
+    "forecast",   # Time series forecasting tools
     
     # Module 2: ANOVA, MANOVA, ANCOVA
     "ggpubr",      # Publication-ready plots, customizing ggplot2
@@ -61,6 +63,7 @@ essential_packages <- c(
     "pls",         # Partial Least Squares and Principal Component Regression
     "igraph",      # Network analysis and graph-based MDS visualization
     "cluster",     # Clustering algorithms and MDS support
+    "ggrepel",     # Repulsive text labels for ggplot2 (avoid overlapping)
     
     # Module 4: Factor Analysis and Conjoint Analysis
     "corrplot",    # Correlation matrix visualization (ellipse, color plots)
@@ -69,7 +72,10 @@ essential_packages <- c(
     "conjoint",    # Conjoint analysis (part-worth utilities, importance)
     "lavaan",      # Latent Variable Analysis - SEM, CFA, path analysis
     "lavaanPlot",  # Visualization of SEM path diagrams
-    "DiagrammeR"   # Graph/diagram rendering for SEM plots
+    "DiagrammeR",  # Graph/diagram rendering for SEM plots
+    
+    # Module 5: Clustering and Discriminant Analysis
+    "DiscriMiner"  # Discriminant analysis (plsDA, linDA)
 )
 
 cat("Installing", length(essential_packages), "essential packages...\n")
